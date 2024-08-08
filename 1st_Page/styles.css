@@ -1,0 +1,65 @@
+body,
+html {
+    padding: 0;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: lightgrey;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+.container h2 {
+    position: relative;
+    align-items: center;
+    margin: 50px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 700px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(108, 171, 210);
+    color: #333;
+    border: none;
+    appearance: none;
+    text-align: center;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: lightgreen;
+    cursor: pointer;
+    align-items: center;
+    border: none;
+}
+
+.btn:hover {
+    background-color: rgb(90, 167, 90);
+}
+
+.warning {
+    margin-top: 20px;
+    color: red;
+    font-size: 1em;
+    text-align: center; 
+}

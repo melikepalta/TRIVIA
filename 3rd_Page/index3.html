@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> TRIVIA 3rd Page </title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="text1">Congrats!</div>
+        <div class="image">
+            <img src="trophypic.jpeg" width="175" height="175">
+        </div>
+        <div class="text2" id="finalScore">You Earned 0 Points</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const score = localStorage.getItem('finalScore') || 0;
+            document.getElementById('finalScore').textContent = `You Earned ${score} Points!`;
+        });
+    </script>
+</body>
+</html>
