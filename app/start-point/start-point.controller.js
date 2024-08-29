@@ -1,5 +1,5 @@
 const path = require('path');
 
 exports.renderStartPoint = (req, res) => {
-    res.render('start-point/start-point');
+    res.render('./start-point');
 };
