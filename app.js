@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const startPointRoute = require('./app/start-point/start-point.route.js');
-const quizRoute = require('./app/quiz/quiz.route'); //imported the quiz route
+const quizRoute = require('./app/quiz/quiz.route.js'); //imported the quiz route
 
 // Setup Handlebars as the view engine
 app.set('view engine', 'hbs');
