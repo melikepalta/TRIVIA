@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TRIVIA Quiz</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        {{#each questions}}
+            <div class="question-box">
+                <h3>{{@index}}. {{this.question}}</h3>
+                <ul>
+                    {{#each this.incorrect_answers}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                    <li>{{this.correct_answer}}</li>
+                </ul>
+            </div>
+        {{/each}}
+    </div>
+</body>
+</html>
