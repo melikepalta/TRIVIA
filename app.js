@@ -10,10 +10,10 @@ app.set('views', path.join(__dirname, 'app'));
 
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/quiz', quizRoute); //used the quiz route
 
 // Use the start-point route
 app.use('/start-point', startPointRoute);
+app.use('/quiz', quizRoute); //used the quiz route
 
 // Start the server
 const PORT = process.env.PORT || 3000;
