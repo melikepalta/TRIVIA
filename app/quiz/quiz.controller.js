@@ -1,4 +1,4 @@
-const axios = (require('axios');
+const axios = require('axios');
 
 exports.renderQuiz = async (req, res) => {
   
@@ -17,7 +17,7 @@ exports.renderQuiz = async (req, res) => {
   }
 
     const questions = reponse.data.results;
-    res.render('./quiz/', { questions });
+    res.render('quiz/quiz', { questions });
 
   } catch (error) {
       console.error('Error fetching trivia questions:', error);
