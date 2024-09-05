@@ -13,7 +13,7 @@ exports.renderQuiz = async (req, res) => {
     const response = await axios.get(apiUrl);
 
     if (response.data.response_code !== 0) {
-      return res.status(400).send('No questions found for the selected category and difficulty.');
+      return res.status(400).send("No questions found for the selected category and difficulty.");
   }
 
     const questions = reponse.data.results;
