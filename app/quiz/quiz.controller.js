@@ -5,7 +5,7 @@ exports.renderQuiz = async (req, res) => {
   const { category, difficulty } = req.query;
 
   if (!category || !difficulty) {
-    return res.status(400).send('Category and difficulty are required.);
+    return res.status(400).send("Category and difficulty are required.");
   }
 
   try {
