@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TRIVIA 2nd Page</title>
+    <link rel="stylesheet" href="/styles/styles2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Content for Page 2 -->
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+        <!-- Question -->
+        <div class="question-box">
+            <div class="question">{{question}}</div>
+        </div>
+
+        <!-- Answers rendered as buttons -->
+        <div class="answers">
+            {{#each answers}}
+                <button class="answer">{{this}}</button>
+            {{/each}}
+        </div>
+
+        <!-- Feedback section -->
+        <div id="feedback" class="feedback"></div>
+
+        <!-- Timer display -->
+        <div id="timer"></div>
+    </div>
+
+    <script src="/scripts/script2.js"></script>
+</body>
+</html>
