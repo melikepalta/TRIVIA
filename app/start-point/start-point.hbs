@@ -1,33 +1,44 @@
+<!-- start-point.hbs -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TRIVIA 1st Page</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>Select Trivia Options</title>
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
     <div class="container">
-        <h2>Please select the difficulty level and category before start</h2>
-        
-        <!-- Category Dropdown -->
-        <select class="dropdown" id="category-select">
-            <option value="">Select Category</option>
-            <option value="23">History</option>
-            <option value="17">Science</option>
-            <option value="12">Music</option>
-        </select>
-        
-        <!-- Difficulty Dropdown -->
-        <select class="dropdown" id="difficulty-select">
-            <option value="">Select Difficulty</option>
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-        
-        <button class="btn">Let's Play</button>
-        <div id="warning" class="warning"></div>
-    </div>  
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/script.js"></script>
+        <h1>Select Category and Difficulty</h1>
+        <form id="startForm">
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="sports">Sports</option>
+                <option value="history">History</option>
+                <option value="science">Science</option>
+                <!-- Add more categories as needed -->
+            </select>
+
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty" name="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('startForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get the selected category and difficulty
+            const category = document.getElementById('category').value;
+            const difficulty = document.getElementById('difficulty').value;
+
+            // Redirect to Page 2 with category and difficulty as query parameters
+            window.location.href = `/page2?category=${category}&difficulty=${difficulty}`;
+        });
+    </script>
 </body>
 </html>

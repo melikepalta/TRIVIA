@@ -1,0 +1,110 @@
+/* Basic Page Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* Ensure the page takes full height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for Quiz */
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 450px; /* Responsive width */
+    border-radius: 12px; /* Rounded corners */
+    padding: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background-color: lightgrey;
+    border-radius: 10px;
+    height: 12px; /* Slightly thicker */
+    margin-bottom: 20px;
+}
+
+.progress {
+    width: 0%;
+    background-color: blue;
+    border-radius: 10px;
+    height: 12px;
+    transition: width 1s linear; /* Smooth progress animation */
+}
+
+/* Question Box */
+.question-box {
+    background-color: lightskyblue;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: bold; /* Make question text stand out */
+    margin: 0;
+}
+
+/* Answer Buttons */
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.answer {
+    background-color: #6d99ea;
+    border: none;
+    padding: 12px;
+    border-radius: 6px; /* Rounded buttons */
+    font-size: medium;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    color: white;
+}
+
+.answer:hover {
+    background-color: rgb(54, 54, 81); /* Darken on hover */
+}
+
+.wrong-answer {
+    background-color: red; /* Wrong answer color */
+    color: white;
+}
+
+.correct-answer {
+    background-color: green; /* Correct answer color */
+    color: white;
+}
+
+/* Feedback Area */
+.feedback {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    color: darkslategray; /* Darker feedback text */
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        padding: 15px;
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .question {
+        font-size: 18px;
+    }
+
+    .answer {
+        font-size: smaller;
+    }
+}
